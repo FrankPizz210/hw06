@@ -71,8 +71,6 @@ defmodule Digits.Game do
       guesses: st.guesses,
       hints: st.hints,
       name: user,
-      secret: st.secret,
-      # player: st.player,
     }
   end
 

@@ -18,7 +18,6 @@ defmodule DigitsWeb.GameChannel do
 
   @impl true
   def handle_in("login", user, socket) do
-    IO.puts "Your are in ch_login"
     socket = assign(socket, :user, user)
     name = socket.assigns[:name]
     view = GameServer.peek(name)

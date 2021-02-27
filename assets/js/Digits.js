@@ -189,18 +189,18 @@ function Digits() {
     name: "",
     player: "",
   });
-  console.log("render state", state);
+  
   let {isWin, guesses, hints, guess, name, player} = state;
 
 
   useEffect(() => {
-    console.log("state is", state)
+    
     ch_join(setState, name);
   }, []);
 
   let body = null;
 
-console.log("player is", state.player);
+
   if (state.name === "") {
     body = <Login />
   } else if (state.player === "") {

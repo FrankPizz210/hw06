@@ -16,10 +16,8 @@ defmodule Digits.GameServer do
   end
 
   def start_link(name) do
-    IO.puts "start_link"
     # Digits.BackupAgent.get(name) ||
     game =  Digits.Game.new()
-    IO.inspect game
     #game = Digits.BackupAgent.get(name) || Digits.Game.new(&sched_round(name, &1))
     GenServer.start_link(__MODULE__, game, name: reg(name))
   end

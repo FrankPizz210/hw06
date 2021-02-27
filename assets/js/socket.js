@@ -28,7 +28,7 @@ let state = {
 let callback = null;
 
 function state_update(st) {
-  console.log("new state", st);
+  
   state = st;
   if (callback) {
     callback(st);
